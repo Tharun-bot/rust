@@ -1,19 +1,11 @@
-fn main() {
-    let s1:String  = get_string();
-    println!("S1 : {}", s1);
-
-    let s2:String = String::from("World");
-    let s3:String = send_get_string(s2);
-
-    println!("S3 : {}", s3);
+fn main(){
+    let mut arr1:[u8; 5] = [1, 2, 3, 4, 5];
+    change_arr(arr1); //pass by value
+    println!("Changed array : {}", arr1);
 }
 
-fn get_string() -> String{
-    let n_string:String = String::from("Hello");
-    return n_string;
+fn change_arr(mut arr1:[u8;5]){
+    arr1[0] = 8;
+    println!("{}", arr1);
 }
 
-fn send_get_string(get_string:String)->String{
-    let new_string: String = get_string;
-    return new_string;
-}
