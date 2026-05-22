@@ -31,3 +31,6 @@ fn main(){
     println!("You took {} attempts to get it correct as {}", count, fruits[generated_num]);
 
 }
+
+
+tutorial
